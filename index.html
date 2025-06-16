@@ -2,26 +2,95 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Desa Wisata Pertanian Terpadu</title>
   <style>
-    body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background: #f2f9f1; color: #333; scroll-behavior: smooth; }
-    header { background: #4caf50; color: white; padding: 2rem; text-align: center; }
-    nav { background: #388e3c; padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; transition: color 0.3s ease; }
-    nav a:hover { color: #c8e6c9; }
-    section { padding: 2rem; max-width: 1000px; margin: auto; animation: fadeInUp 1s ease; }
-    h2 { color: #2e7d32; }
-    .gallery img { width: 100%; max-width: 300px; margin: 10px; border-radius: 10px; transition: transform 0.3s ease; }
-    .gallery img:hover { transform: scale(1.05); }
-    .card { background: white; padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    footer { background: #2e7d32; color: white; text-align: center; padding: 1rem; }
-    button { background: #66bb6a; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; transition: background 0.3s ease; }
-    button:hover { background: #4caf50; }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f9f1;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #4caf50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    nav {
+      background: #388e3c;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #c8e6c9;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      color: #2e7d32;
+    }
+    .gallery-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    .gallery {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin: 1rem 0;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery:hover {
+      transform: scale(1.05);
+    }
+    button {
+      background: #66bb6a;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      display: block;
+      margin: 1rem auto 0;
+    }
+    button:hover {
+      background: #4caf50;
+    }
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 1rem;
     }
   </style>
 </head>
@@ -38,38 +107,71 @@
     <a href="#kontak">Kontak</a>
   </nav>
 
-  <section id="track" class="card">
+  <section id="track">
     <h2>Jogging Track Hijau & Sejuk</h2>
     <p>Awali perjalanan menyusuri track alami yang dipenuhi tanaman hortikultura seperti terong, timun, tomat, kacang panjang, pakcoi, sawi, bayam, dan kangkung. Di sela-sela track, terdapat kolam ikan yang digunakan untuk pengairan tanaman secara alami dan menyuburkan tanah melalui sistem aquaponik.</p>
-    <img src="gambar3.jpg" alt="Jogging Track" class="gallery">
+    <div class="gallery-wrapper">
+      <img src="gambar1.jpg" alt="Jogging Track" class="gallery" />
+    </div>
   </section>
 
-  <section id="panen" class="card">
+  <section id="panen">
     <h2>Zona Panen Mandiri</h2>
     <p>Pengunjung dapat memanen langsung hasil pertanian tanpa biaya tambahan. Semua sayuran segar bisa dibawa pulang, sudah termasuk dalam harga tiket masuk!</p>
-    <img src="gambar1.jpg" alt="Kegiatan Panen" class="gallery">
+    <div class="gallery-wrapper">
+      <img src="gambar2.jpg" alt="Zona Panen" class="gallery" />
+    </div>
   </section>
 
-  <section id="edukasi" class="card">
+  <section id="edukasi">
     <h2>Zona Edukasi & Pengelolaan</h2>
     <p>Dipandu oleh ibu-ibu PKK, Anda akan belajar mengolah hasil panen menjadi produk seperti acar, jus, atau camilan sehat. Dapatkan ilmu tentang ketahanan pangan langsung dari sumbernya!</p>
-    <img src="gambar2.jpg" alt="Zona Edukasi" class="gallery">
+    <div class="gallery-wrapper">
+      <img src="gambar3.jpg" alt="Zona Edukasi" class="gallery" />
+    </div>
   </section>
 
-  <section id="tiket" class="card">
+  <section id="tiket">
     <h2>Harga Tiket & Reservasi</h2>
     <p><strong>Rp 75.000,- / orang</strong> sudah termasuk semua fasilitas: panen sayuran, workshop, dan area jogging track.</p>
     <button onclick="alert('Pemesanan Tiket belum tersedia secara online')">Pesan Tiket Sekarang</button>
   </section>
 
-  <section id="kontak" class="card">
+  <section id="kontak">
     <h2>Lokasi & Kontak</h2>
-    <p>📍 Desa Wisata Pertanian Alam Asri – Kabupaten Beresi </p>
+    <p>📍 Desa Wisata Pertanian Alam Asri – Kabupaten Beresi</p>
     <p>📞 088 211 332 - 📧 info@desawisataterpadu.id</p>
   </section>
 
   <footer>
     &copy; 2025 Desa Wisata Pertanian Terpadu | Instagram: @wisatapertanian_terpadu
   </footer>
+
+  <script>
+    // Animasi fade in saat scroll ke section
+    function revealSections() {
+      const sections = document.querySelectorAll('section');
+      const windowHeight = window.innerHeight;
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < windowHeight - 100) {
+          section.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealSections);
+    window.addEventListener('load', revealSections);
+
+    // Tambah interaksi klik pada gambar (contoh: zoom)
+    document.querySelectorAll('.gallery').forEach(img => {
+      img.addEventListener('click', () => {
+        if (img.style.transform === 'scale(1.2)') {
+          img.style.transform = 'scale(1)';
+        } else {
+          img.style.transform = 'scale(1.2)';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
